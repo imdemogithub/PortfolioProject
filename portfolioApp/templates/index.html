@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{app_name}}</title>
+</head>
+<body>
+    {{technologies}}
+
+    <!-- we need jinja2 templating language to traverse collection which comes from context data -->
+
+    <ul>
+        {% for t in technologies %}
+            {% if t == 'python' %}
+                <li style="background-color: #06d;">{{t}}</li>
+            {% else %}
+                <li>{{t}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
